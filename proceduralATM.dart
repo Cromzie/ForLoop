@@ -28,7 +28,8 @@ void cashWithdrawal() {
     String? cash = stdin.readLineSync();
     if (pin == pin1 && cash == 'one' || cash == 'two') {
       print('\nTake your cash');
-    } else if (pin == pin1 && cash == 'eight' ||
+    }
+    else if (pin == pin1 && cash == 'eight' ||
         cash != 'one' ||
         cash != 'two') {
       print('Hello \n');
@@ -36,7 +37,8 @@ void cashWithdrawal() {
       int? cashOther = int.parse(stdin.readLineSync()!);
       if (cashOther < 1000 || cashOther % 1000 != 0 || cashOther > 2000) {
         print('O wrong nau');
-      } else if (cashOther <= 2000) {
+      } 
+      else if (cashOther <= 2000) {
         print('Take your cash');
       }
     }
@@ -44,27 +46,32 @@ void cashWithdrawal() {
     String? balanceAfterWithdrawal = stdin.readLineSync()!;
     if (balanceAfterWithdrawal != 'Y') {
       print('Okay');
-    } else if (balanceAfterWithdrawal == 'Y') {
+    } 
+    else if (balanceAfterWithdrawal == 'Y') {
       print('Input your 4-digit pin');
       String? pin = stdin.readLineSync();
       if (pin == pin1) {
         if (cash == 'one') {
           int? onek = 2000 - 1000;
           print('\u{020A6}$onek is what you have left');
-        } else if (cash == 'two') {
+        } 
+        else if (cash == 'two') {
           int? onek = 2000 - 2000;
           print('\u{020A6}$onek is what you have left');
-        } else if (cash == 'eight') {
+        }
+        else if (cash == 'eight') {
           if (cash == cash) {
             print('\u{020A6}1000 is what you have left');
-          } else if (cash == 2000) {
+        }
+        else if (cash == 2000) {
             int? onek = 2000 - 2000;
             print('\u{020A6}onek is what you have left');
-          }
+        }
         }
       }
     }
-  } else if (pin == pin2) {
+  }
+  else if (pin == pin2) {
     print('\nBadekale, how much would you like to withdraw? \n');
     // cashdenomination();
     String? cash = stdin.readLineSync();
@@ -76,7 +83,8 @@ void cashWithdrawal() {
         cash == 'six' ||
         cash == 'sev') {
       print('\nTake your cash');
-    } else if (pin == pin2 && cash == 'eight' ||
+    }
+    else if (pin == pin2 && cash == 'eight' ||
         cash != 'one' ||
         cash != 'two' ||
         cash != 'thr' ||
@@ -89,7 +97,8 @@ void cashWithdrawal() {
       int? cash = int.parse(stdin.readLineSync()!);
       if (cash < 1000 || cash % 1000 != 0 || cash > 40000) {
         print('O wrong nau');
-      } else if (cash <= 40000) {
+      }
+      else if (cash <= 40000) {
         print('Take your cash');
       }
     }
@@ -100,27 +109,34 @@ void cashWithdrawal() {
       if (cash == 'one') {
         int? onek = 40000 - 1000;
         print('\u{020A6}$onek is what you have left');
-      } else if (cash == 'two') {
+      }
+      else if (cash == 'two') {
         int? onek = 40000 - 2000;
         print('\u{020A6}$onek is what you have left');
-      } else if (cash == 'thr') {
+      }
+      else if (cash == 'thr') {
         int? onek = 40000 - 3000;
         print('\u{020A6}$onek is what you have left');
-      } else if (cash == 'fou') {
+      }
+      else if (cash == 'fou') {
         int? onek = 40000 - 5000;
         print('\u{020A6}$onek is what you have left');
-      } else if (cash == 'fiv') {
+      }
+      else if (cash == 'fiv') {
         int? onek = 40000 - 10000;
         print('\u{020A6}$onek is what you have left');
-      } else if (cash == 'six') {
+      }
+      else if (cash == 'six') {
         int? onek = 40000 - 15000;
         print('\u{020A6}$onek is what you have left');
-      } else if (cash == 'sev') {
+      }
+      else if (cash == 'sev') {
         int? onek = 40000 - 20000;
         print('\u{020A6}$onek is what you have left');
       }
     }
-  } else if (pin == pin3) {
+  }
+  else if (pin == pin3) {
     print('\nAdekunle, how much would you like to withdraw? \n');
     // cashdenomination();
     String? cash = stdin.readLineSync();
@@ -132,7 +148,8 @@ void cashWithdrawal() {
         cash == 'six' ||
         cash == 'sev') {
       print('\nTake your cash');
-    } else if (pin == pin3 && cash == 'eight' ||
+    }
+    else if (pin == pin3 && cash == 'eight' ||
         cash != 'one' ||
         cash != 'two' ||
         cash != 'thr' ||
@@ -194,13 +211,13 @@ void cashWithdrawal() {
         newPin == pin2 ||
         newPin == pin3 ||
         newPin.length == 4) {
-      // transactions();
+      transactions();
     } else {
       print(
           'Wrong, input \'C\' to Continue \n \'T\' to treminate this operation and go inside the bank to rectify the error');
       String? rectify = stdin.readLineSync();
       if (rectify == 'C') {
-        // transactions();
+        transactions();
       } else if (rectify == 'T' || rectify != 'C') {
         print(
             'Thank you for choosing Adbrig \n You should have your ATM card now. . . .');
@@ -221,7 +238,7 @@ void cashWithdrawal() {
 
     String? opt = stdin.readLineSync();
     if (opt == '1') {
-      // cashWithdrawal();
+      cashWithdrawal();
     } else if (opt == '2') {
       // transfer();
     } else if (opt == '8') {
@@ -258,11 +275,9 @@ void activities() {
   if (opt == '1') {
     print('\n Kindly insert your ATM card');
     // transactions();
-  } 
-  else if (opt == '2') {
+  } else if (opt == '2') {
     // createAccount();
-  } 
-  else {
+  } else {
     // yetToMakeChoice();
   }
 }
